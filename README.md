@@ -21,3 +21,5 @@ Preparación del repositorio. Todavía no hay una aplicación ejecutable, servic
 El paquete especializado Control Granja Engineering v2.1 y el roadmap original se conservan en el entorno local de ingeniería. No se requieren para consultar esta base pública y no forman parte de esta entrega. Antes de publicar una versión de esos materiales se revisarán su contenido, referencias e historial.
 
 No hay instalación de dependencias ni pruebas de aplicación que ejecutar en esta fase. La verificación de CG-001 consiste en revisar un clon limpio, su árbol, sus enlaces y el historial alcanzable de su rama.
+
+[Reporte de CG-001](docs/reportes/REPORTE_CG-001.md): cambios, verificaciones y estado de revisión de la entrega.
