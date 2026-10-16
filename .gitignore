@@ -147,3 +147,21 @@ vite.config.ts.timestamp-*
 
 # Turbo Repo
 .turbo
+
+# Material interno y evidencias: no forman parte de la base pública
+private/
+.local/
+.validation-tmp/
+docs/diagnostico/
+docs/producto/
+docs/instrumentos/
+docs/roadmap/
+*.zip
+*.sql
+*.sqlite
+*.sqlite3
+*.db
+*.pem
+*.key
+__pycache__/
+*.py[cod]
