@@ -100,10 +100,12 @@ Se contemplan ausencias, no medido, cero legítimo, llegada tardía, correccione
 - Rama: codex/CG-005-flujo-diario-produccion, subida al remoto.
 - Base main: c030ad11e5628be78b6870b7eafb2122e6700fef.
 - Commit del modelo: [888a45b](https://github.com/VicWaltzO/Avicendia/commit/888a45b50794908c791ec995b9fce298964200b9), docs(product): mapear flujo diario de produccion (CG-005).
-- Este reporte se registra en un segundo commit semántico de CG-005, en la misma rama. El SHA de su propio commit se consulta en el historial del archivo, evitando una referencia circular.
+- Commit de incorporación del reporte: [65ad583](https://github.com/VicWaltzO/Avicendia/commit/65ad583d086aa69a31f5ce453c8725f6f34645e9), docs(product): registrar reporte del flujo diario (CG-005). La normalización posterior queda en un commit adicional de esta misma tarea; su SHA se consulta en el historial del archivo.
 - [PR #5](https://github.com/VicWaltzO/Avicendia/pull/5), abierto hacia main con modelo y reporte, sin fusionar.
 
 CG-005 no hace push directo a main, merge ni despliegue. La rama interna con el paquete original no se publica.
+
+El modelo se subió con Git. Tras fallos de conexión al subir el reporte, se publicó el mismo contenido mediante el conector de GitHub y se recuperó su commit localmente. La comprobación posterior detectó finales CRLF en el blob creado por esa vía; se normalizaron a LF antes de la entrega definitiva. Se conservó el commit local previo como respaldo sin publicarlo. El diff final se volvió a comprobar tras la normalización.
 
 ## 9. Riesgos, hipótesis y decisiones pendientes
 
