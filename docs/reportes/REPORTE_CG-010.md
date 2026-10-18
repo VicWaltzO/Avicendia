@@ -24,8 +24,8 @@ Se preservaron los cambios ajenos y la preparación privada local. Las modificac
 
 | Archivo | Contenido |
 |---|---|
-| [METRICAS_EXITO_PILOTO.md](../00-producto/METRICAS_EXITO_PILOTO.md) | Siete fichas de catorce atributos, protocolo de conteo/tiempo, siete candidatas, comparación A/B, responsabilidades, privacidad y decisiones pendientes |
-| [PLANTILLA_SEGUIMIENTO_KPI.md](../00-producto/PLANTILLA_SEGUIMIENTO_KPI.md) | Ficha vacía de 39 campos; línea base POR MEDIR y seis denominaciones de disponibilidad/calculabilidad/revisión sin seleccionar |
+| [METRICAS_EXITO_PILOTO.md](https://github.com/VicWaltzO/Avicendia/blob/9a29797437f790df6a1f32518fe68c6e835da7bd/docs/00-producto/METRICAS_EXITO_PILOTO.md) | Siete fichas de catorce atributos, protocolo de conteo/tiempo, siete candidatas, comparación A/B, responsabilidades, privacidad y decisiones pendientes |
+| [PLANTILLA_SEGUIMIENTO_KPI.md](https://github.com/VicWaltzO/Avicendia/blob/9a29797437f790df6a1f32518fe68c6e835da7bd/docs/00-producto/PLANTILLA_SEGUIMIENTO_KPI.md) | Ficha vacía de 39 campos; línea base POR MEDIR y seis denominaciones de disponibilidad/calculabilidad/revisión sin seleccionar |
 | Este reporte | Alcance, aceptación, verificaciones, limitaciones y entrega; copia local también en la carpeta raíz docs/reportes solicitada |
 
 | ID | Medida principal y distinción relevante |
@@ -91,6 +91,7 @@ La aceptación de CG-010 depende de auditoría externa. Un PASS documental no ac
 | Verificación con el reporte previo a publicación | PASS: cuatro tablas, enlaces, dieciséis criterios y aceptación externa pendiente; esa evidencia corresponde a la versión inicial |
 | Lectura completa del diff y ortografía manual | Revisados los tres archivos; aclarados conteos, denominador de correcciones tras cierre y separación visual de secciones |
 | git diff --cached --check | Salida 0; solo tres rutas nuevas de CG-010 |
+| Enlaces desde la copia raíz | Se detectaron dos rutas relativas no disponibles allí; se sustituyeron por enlaces a versiones publicadas, manteniendo el reporte raíz idéntico al de entrega |
 
 Los ejercicios y scripts de redacción/verificación son temporales, usan biblioteca estándar y permanecen fuera del PR. No son implementación de métricas del SaaS ni un piloto simulado presentado como real.
 
@@ -122,7 +123,7 @@ Se creó el [PR #10](https://github.com/VicWaltzO/Avicendia/pull/10) hacia main;
 | Identidad remota | Autor y committer noreply aprobados, mediante Git |
 | Referencias antes/después | main sigue en 6047406f7ff80a30c0b7c6cace9e395c8de2e68d; otras ramas y etiquetas observadas intactas |
 
-Esta constancia se identifica en el [historial del PR](https://github.com/VicWaltzO/Avicendia/pull/10/commits) con docs(00): registrar entrega verificada (CG-010). Solo actualiza el reporte y se publica por avance rápido ordinario. El SHA de este propio commit y la cabeza final se consultan en dicho historial y en la entrega de auditoría, evitando autorreferencia circular.
+La constancia se publicó en b16a224f938a93df9a643d68e7d5d3f1689226cb con docs(00): registrar entrega verificada (CG-010). El ajuste posterior docs(00): enlazar entregables del reporte local (CG-010) cambia solo los enlaces de este reporte a las versiones publicadas del primer commit para que también funcionen desde la carpeta raíz. Su SHA y la cabeza final se consultan en el [historial del PR](https://github.com/VicWaltzO/Avicendia/pull/10/commits) y en la entrega de auditoría. Ambos cambios del reporte utilizan avance rápido ordinario; la metodología y plantilla no cambian.
 
 La copia local del reporte se guarda en docs/reportes de la carpeta raíz Avicendia indicada por el propietario. Se verifica igualdad exacta con el reporte de la rama de entrega; no se sobrescriben versiones diferentes sin comparación. Los documentos anteriores permanecen intactos.
 
