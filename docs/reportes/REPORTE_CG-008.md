@@ -2,7 +2,7 @@
 
 Elaboración inicial: 17 de octubre de 2026. Actualización autorizada: 18 de octubre de 2026, America/Bogota. Fase 00 · Prioridad P0 · Tamaño S · Documentación MVP · Riesgo R0 para el caso sintético.
 
-**Estado: PARCIAL — caso sintético validado; reproducción histórica exacta y aceptación externa pendientes.** La corrección de publicación está autorizada y preparada con identidad pública noreply; su ejecución y comprobación remota se distinguen en la sección 8.
+**Estado: PARCIAL — caso sintético validado; reproducción histórica exacta y aceptación externa pendientes.** La publicación fue corregida con el lease autorizado y con identidad pública noreply. El PR está abierto, sin fusionar; persisten el criterio histórico y la evaluación externa del riesgo residual de metadatos.
 
 ## 1. Objetivo y alcance
 
@@ -63,7 +63,7 @@ No se asignan bajas a partidas sin desglose ni se infieren mediciones. pH y temp
 | 10. JSON válido | PASS | Parser estricto, sin claves duplicadas ni constantes no JSON |
 | 11. Coherencia con glosario | PASS documental | Campaña/partida, infraestructura, recepción, evidencia/registro y cierres separados |
 | 12. Separación histórica/sintética | PASS | Avisos en documento/JSON y cantidades iniciales distintas verificadas localmente |
-| 13. Ausencia de datos privados publicados | PARCIAL | Archivos sin datos operativos privados; incidencia de metadatos del commit intermedio; sustitución autorizada y preparada, sin purga remota acreditada |
+| 13. Ausencia de datos privados publicados | PARCIAL | Archivos sin datos operativos privados; incidencia de metadatos del commit intermedio; rama sustituida con identidad noreply y commit anterior fuera de su ascendencia; persiste riesgo de objetos/referencias/cachés sin purga acreditada |
 | 14. Límites e incertidumbres | PASS | Nacimiento/hora, bajas por partida, mortalidad, alimento, peso por saco, mediciones y reproducción histórica pendientes |
 | Original: reproducir cantidades históricas | PENDIENTE | No se ejecutó comparación cuantitativa histórica completa; no se sustituye con un PASS sintético |
 
@@ -118,9 +118,9 @@ La primera subida Git no respondió y se detuvo. El conector publicó los dos ar
 
 El propietario autorizó expresamente el 18 de octubre una sustitución limitada a refs/heads/codex/CG-008-ejemplo-operativo-g06, únicamente si su cabeza sigue siendo ff2dfe71dbffdf1507f9eb3bc247addb6fd24eee. La comprobación previa confirmó ese valor y main en b023724ea04f7303ac96673b8445fd2eb95b618e. No hay autorización para forzar otras referencias.
 
-El commit local 24f5c12c34296144ddc9f7b26b1f0dfa1ce9e8e8 contiene el caso y fixture revisados. Su árbol dd4d0e6af4ee6e790df2831775a78b221fee0789 coincide exactamente con el del commit intermedio remoto. El reporte se incorpora mediante un commit local con identidad pública. Se verificaron autor y committer de todos los commits preparados; ambos corresponden a VicWaltzO con el noreply aprobado. El historial nuevo parte directamente de la base indicada y no incorpora trabajo remoto distinto: la única diferencia respecto al árbol remoto es el reporte.
+El commit local 24f5c12c34296144ddc9f7b26b1f0dfa1ce9e8e8 contiene el caso y fixture revisados. Su árbol dd4d0e6af4ee6e790df2831775a78b221fee0789 coincide exactamente con el del commit intermedio remoto. El reporte preparado para la corrección se publicó en 95a62203603d46989645c66950b4baddb5b79cd7 mediante Git, con identidad pública. Se verificaron autor y committer de todos los commits preparados; ambos corresponden a VicWaltzO con el noreply aprobado. El historial nuevo parte directamente de la base indicada y no incorpora trabajo remoto distinto: la única diferencia respecto al árbol remoto es el reporte.
 
-| Comprobación de la corrección | Resultado al preparar la publicación |
+| Comprobación previa de la corrección | Resultado |
 |---|---|
 | Estado local | Limpio antes de actualizar únicamente el reporte |
 | Base y alcance | main b023724; exactamente tres archivos nuevos de CG-008 |
@@ -131,7 +131,32 @@ El commit local 24f5c12c34296144ddc9f7b26b1f0dfa1ce9e8e8 contiene el caso y fixt
 | Validación matemática externa | El supervisor comunica revisión independiente sin defectos bloqueantes; no sustituye el criterio histórico |
 | Referencia histórica | Sin nuevas consultas ni operaciones privadas durante esta corrección |
 
-**Estado de publicación en este commit:** actualización del reporte preparada para acompañar la sustitución real mediante force-with-lease con el valor esperado explícito anterior. El resultado del push, la cabeza publicada, la comprobación posterior y el enlace del PR se registrarán tras ejecutarlos. No se confunde la simulación anterior con una publicación efectiva.
+### Publicación efectuada y comprobación posterior
+
+El comando real fue git push --force-with-lease=refs/heads/codex/CG-008-ejemplo-operativo-g06:ff2dfe71dbffdf1507f9eb3bc247addb6fd24eee origin HEAD:refs/heads/codex/CG-008-ejemplo-operativo-g06, con selección explícita de la cuenta y transporte no interactivo. Terminó con salida 0: ff2dfe7 → 95a6220. La simulación anterior también terminó con salida 0, pero se registra por separado del resultado efectivo. No se utilizó force sin lease, mirror ni el conector para crear commits durante esta corrección.
+
+| Verificación posterior sobre la cabeza 95a6220 | Resultado observado |
+|---|---|
+| Consulta remota y fetch de la rama | 95a62203603d46989645c66950b4baddb5b79cd7, igual a la cabeza local publicada |
+| Árbol completo local/remoto | d93552a9683e6ae782107d9f6955729df4273d3b en ambos; diff vacío |
+| Autor y committer de los dos commits nuevos, mediante objetos Git recuperados | PASS; VicWaltzO y dirección pública noreply aprobada en ambos campos |
+| Consulta de los commits en GitHub | Disponibles y asociados a VicWaltzO; el conector no expone los correos, por lo que la comprobación completa se basa en Git |
+| Ancestría del commit intermedio | merge-base --is-ancestor devolvió 1: ff2dfe7 no pertenece a la rama corregida |
+| Captura remota antes/después | main continúa en b023724ea04f7303ac96673b8445fd2eb95b618e; las demás ramas y etiquetas observadas no cambiaron |
+| Diff contra main | Exactamente los tres archivos autorizados; documentos previos intactos |
+| Documento y fixture publicados | Hashes idénticos a los revisados; no se modificaron sus bytes |
+| Reporte consultado en GitHub | Disponible en 95a6220, blob 6d4f3fc907bf4b20500eac2d4198aec6eecdefbe, correspondiente a la versión preparada para el push |
+| Nueva comprobación pública temporal | PASS: JSON estricto, hashes, tablas, enlaces, matriz, estado parcial e identidades; sin lectura de referencias históricas |
+
+El [PR #8](https://github.com/VicWaltzO/Avicendia/pull/8) se creó hacia main después de estas comprobaciones. Contiene únicamente los tres archivos de CG-008 y explica el carácter sintético, los cálculos, la incidencia de metadatos, el lease ejecutado, su persistencia posible y el criterio histórico pendiente. Está abierto y no se ha fusionado.
+
+| Commit de entrega | Contenido y mensaje |
+|---|---|
+| 24f5c12c34296144ddc9f7b26b1f0dfa1ce9e8e8 | Caso y fixture: docs(00): documentar-ejemplo-operativo-g06 (CG-008) |
+| 95a62203603d46989645c66950b4baddb5b79cd7 | Reporte actualizado antes de publicar: docs(00): registrar reporte del caso sintetico G06 (CG-008) |
+| Constancia posterior, este commit | Solo este reporte: docs(00): verificar publicacion corregida (CG-008); su SHA y la cabeza final figuran en el [historial del PR](https://github.com/VicWaltzO/Avicendia/pull/8/commits) |
+
+Esta constancia conserva qué comprobaciones corresponden a la cabeza de sustitución 95a6220. Su incorporación posterior al mismo PR utiliza un avance rápido ordinario, sin otra sustitución forzada. El caso y fixture permanecen idénticos; la cabeza que incluye esta constancia se identifica en el historial del PR y en el reporte final de auditoría, evitando una referencia circular al hash del propio documento.
 
 Sustituir la referencia no acredita que el objeto anterior haya sido eliminado de GitHub. Pueden persistir objetos, referencias o cachés; no se ha ejecutado ni acreditado una purga. La aceptación de ese riesgo residual corresponde al supervisor y propietario.
 
@@ -145,4 +170,4 @@ La recuperación consiste en ajustar el incremento y su publicación sin tocar m
 
 ## 10. Estado final y detención
 
-**PARCIAL.** Caso sintético y verificaciones matemáticas terminados; reproducción histórica exacta y aceptación externa pendientes; publicación autorizada en preparación, con riesgo residual de metadatos documentado. No se inicia CG-009, no se generan especificaciones posteriores, no se fusiona CG-008 ni se implementa código del SaaS.
+**PARCIAL.** Caso sintético y verificaciones matemáticas terminados; reproducción histórica exacta y aceptación externa pendientes; publicación corregida y PR #8 abierto sin fusionar, con riesgo residual de metadatos documentado. No se inicia CG-009, no se generan especificaciones posteriores, no se fusiona CG-008 ni se implementa código del SaaS.
