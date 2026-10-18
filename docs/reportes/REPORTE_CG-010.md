@@ -2,7 +2,7 @@
 
 18 de octubre de 2026 · Fase 00 · Prioridad P0 · Tamaño S · Documentación MVP · Riesgo R0.
 
-**Estado: PARCIAL — documentación verificada, pendiente de aceptación externa y publicación.** No se ha ejecutado un piloto ni obtenido resultados empíricos.
+**Estado: PARCIAL — documentación verificada y publicada; aceptación externa pendiente.** No se ha ejecutado un piloto ni obtenido resultados empíricos.
 
 ## 1. Identificación, objetivo y alcance
 
@@ -88,7 +88,7 @@ La aceptación de CG-010 depende de auditoría externa. Un PASS documental no ac
 | Markdown, enlaces y UTF-8/LF | PASS: once tablas de metodología y dos de plantilla íntegras, enlaces locales válidos, sin BOM/CRLF |
 | Revisión focalizada de privacidad | Sin correos, rutas personales ni patrones de tokens/claves; no certifica ausencia universal de secretos |
 | Alcance y documentos anteriores | Git diff sin cambios ajenos a los tres entregables; no se toca fixture ni roadmap |
-| Verificación con reporte incluido | PASS: cuatro tablas, enlaces, dieciséis criterios y estado pendiente de aceptación externa |
+| Verificación con el reporte previo a publicación | PASS: cuatro tablas, enlaces, dieciséis criterios y aceptación externa pendiente; esa evidencia corresponde a la versión inicial |
 | Lectura completa del diff y ortografía manual | Revisados los tres archivos; aclarados conteos, denominador de correcciones tras cierre y separación visual de secciones |
 | git diff --cached --check | Salida 0; solo tres rutas nuevas de CG-010 |
 
@@ -108,8 +108,24 @@ La comparación puede ser sesgada por aprendizaje, cambios de proceso, conectivi
 
 Rama: codex/CG-010-medicion-exito-piloto. Base main: 6047406f7ff80a30c0b7c6cace9e395c8de2e68d.
 
-En esta versión previa al commit los documentos aún son locales; no hay commits de CG-010 publicados ni PR. Se usará Git con autor y committer noreply aprobados, sin force ni creación alternativa de commits mediante conector. El reporte se actualizará con el resultado real y la copia local solicitada se comprobará al entregar.
+El commit 9a29797437f790df6a1f32518fe68c6e835da7bd, docs(00): definir-medicion-exito-piloto (CG-010), se publicó por Git normal con salida 0. Autor y committer noreply aprobados se comprobaron antes del push y en el objeto recuperado del remoto. No se usó force ni el conector para crear commits de contenido.
+
+Se creó el [PR #10](https://github.com/VicWaltzO/Avicendia/pull/10) hacia main; GitHub confirmó tres archivos, base 6047406 y cabeza inicial 9a29797. El PR permanece abierto sin fusionar.
+
+| Verificación después del primer push | Resultado |
+|---|---|
+| Cabeza remota y fetch | 9a29797437f790df6a1f32518fe68c6e835da7bd, igual a la local publicada |
+| Árbol local/remoto | f1867eb0d3569a4239e9339d0c16849050f6b838; diff vacío |
+| Metodología publicada | Blob 1dab087caa3871868dad644fcd4e9c06432f08fc, versión revisada |
+| Plantilla vacía publicada | Blob b479c7057000d2d8420b166bcbb802cdd62b6bc2 |
+| Reporte inicial publicado | Blob 4793285fc359b8c82bc43c2cbe8beb161fc2f3e8, anterior a esta constancia |
+| Identidad remota | Autor y committer noreply aprobados, mediante Git |
+| Referencias antes/después | main sigue en 6047406f7ff80a30c0b7c6cace9e395c8de2e68d; otras ramas y etiquetas observadas intactas |
+
+Esta constancia se identifica en el [historial del PR](https://github.com/VicWaltzO/Avicendia/pull/10/commits) con docs(00): registrar entrega verificada (CG-010). Solo actualiza el reporte y se publica por avance rápido ordinario. El SHA de este propio commit y la cabeza final se consultan en dicho historial y en la entrega de auditoría, evitando autorreferencia circular.
+
+La copia local del reporte se guarda en docs/reportes de la carpeta raíz Avicendia indicada por el propietario. Se verifica igualdad exacta con el reporte de la rama de entrega; no se sobrescriben versiones diferentes sin comparación. Los documentos anteriores permanecen intactos.
 
 ## 9. Estado final y detención
 
-**PARCIAL — documentación verificada; aceptación externa pendiente.** En esta versión previa a publicar quedan pendientes el push y el PR. No se inicia CG-011, no se generan sus especificaciones, no se fusiona CG-010 ni se recopilan datos reales.
+**PARCIAL — documentación verificada y publicada; aceptación externa pendiente.** Los dieciséis criterios cuentan con evidencia documental y el PR #10 está abierto sin fusionar. No se inicia CG-011, no se generan sus especificaciones, no se fusiona CG-010 ni se recopilan datos reales.
