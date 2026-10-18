@@ -2,7 +2,7 @@
 
 18 de octubre de 2026 · Fase 00 · Prioridad P0 · Tamaño M · Documentación funcional MVP · Riesgo R0.
 
-**Estado: PARCIAL — incremento documental verificado, pendiente de aceptación externa.** No se considera aprobada una política operativa ni implementada una funcionalidad.
+**Estado: PARCIAL — incremento documental verificado y publicado; aceptación externa pendiente.** El PR #9 está abierto sin fusionar. No se considera aprobada una política operativa ni implementada una funcionalidad.
 
 ## 1. Objetivo y alcance
 
@@ -85,7 +85,7 @@ La aceptación final de CG-009 requiere auditoría externa. Las hipótesis de ca
 | Tablas, enlaces y codificación del diccionario | PASS: 25 tablas íntegras, enlaces locales/anchor válidos, UTF-8 sin BOM y LF |
 | Documentos anteriores y fixture | Git diff sin cambios fuera de los dos entregables; blobs de CG-008 preservados |
 | Búsqueda focalizada de privacidad | Sin correos, rutas personales, patrones de tokens o claves; no es garantía universal de ausencia de secretos |
-| Segunda ejecución con el reporte incluido | PASS: sus cuatro tablas, enlace, codificación, quince criterios y estado parcial para aceptación externa |
+| Ejecución con el primer reporte incluido | PASS: cuatro tablas, enlace, codificación, quince criterios y estado parcial; esta evidencia corresponde a la versión anterior a la constancia de publicación |
 | Revisión manual de contenido y ortografía | Definiciones y ejemplos revisados; se aclaró el saldo negativo sin truncado a cero y se ajustó una frase de cierre |
 | Diff completo y git diff --cached --check | Lectura íntegra de ambos archivos nuevos; salida 0 en formato y solo dos rutas de CG-009 |
 
@@ -105,8 +105,21 @@ No se afirma cumplimiento sanitario ni se establecen tratamientos, rangos clíni
 
 Rama: codex/CG-009-campos-reporte-diario. Base main: 04691a5d0a30d1bf790a9a6770e2e9b028d76bd3.
 
-Al redactar esta versión previa al commit, los dos documentos son locales y CG-009 todavía no tiene commits publicados ni PR. Se utilizará exclusivamente Git con autor y committer noreply aprobados; no se recurrirá al conector para crear commits de contenido. El estado se actualizará después de comprobar la publicación efectiva.
+El commit e9e0149e44dead2a2f69c77ad58c68b51e999016, docs(00): especificar-campos-reporte-diario (CG-009), publicó el diccionario y el reporte preparados mediante Git normal, con salida 0. Se comprobaron autor y committer noreply aprobados antes de publicar y sobre el objeto Git recuperado del remoto. No se usó force ni el conector para crear commits de contenido.
+
+El [PR #9](https://github.com/VicWaltzO/Avicendia/pull/9) se creó hacia main. GitHub confirmó dos archivos cambiados, base 04691a5 y cabeza inicial e9e0149. Está abierto, sin fusionar, para auditoría externa.
+
+| Verificación posterior al primer push | Resultado |
+|---|---|
+| Cabeza remota y fetch | e9e0149e44dead2a2f69c77ad58c68b51e999016, igual a la local publicada |
+| Árbol local/remoto | 9b2ec9463befcedbb04fdcd8193f537b3f1c3a50; diff vacío |
+| Diccionario publicado | Blob 505c4da715460c5dc9446e6fec02bec92b6d898b, correspondiente a la versión revisada |
+| Reporte inicial publicado | Blob 7eee4e835bc13f93fabb1f19c632407ab0278f78, anterior a esta constancia |
+| Verificador sobre cadena publicada | PASS documental, compatibilidad sintética e identidad noreply |
+| Referencias remotas antes/después | main sigue en 04691a5d0a30d1bf790a9a6770e2e9b028d76bd3; otras ramas y etiquetas observadas intactas |
+
+Esta constancia posterior modifica únicamente el reporte y se identifica en el [historial del PR](https://github.com/VicWaltzO/Avicendia/pull/9/commits) con el mensaje docs(00): registrar entrega verificada (CG-009). Su publicación utiliza avance rápido ordinario. La cabeza final y el SHA del propio commit se consultan en ese historial y en la entrega de auditoría, evitando una referencia circular en este documento. El diccionario y los documentos anteriores se mantienen sin cambios.
 
 ## 9. Estado final y detención
 
-**PARCIAL — incremento documental verificado; aceptación externa pendiente.** En esta versión previa a publicación quedan pendientes el push y el PR. No se inicia CG-010, no se generan especificaciones posteriores, no se fusiona CG-009 ni se implementa código.
+**PARCIAL — incremento documental verificado y publicado; aceptación externa pendiente.** Los quince criterios tienen evidencia documental; el PR #9 permanece abierto sin fusionar. No se inicia CG-010, no se generan especificaciones posteriores, no se fusiona CG-009 ni se implementa código.
