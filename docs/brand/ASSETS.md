@@ -50,7 +50,7 @@ Un pulso cálido recorre la línea de datos y destaca tres puntos de forma suave
 
 Los GIF se muestran solo cuando el navegador no solicita reducir el movimiento. En los demás casos se usa la composición estática. La [guía de mantenimiento](../README_MAINTENIMIENTO.md) explica cómo comprobar esta selección y regenerar las cuatro variantes con el [generador editable](../../scripts/render-readme-motion.cjs). El generador trabaja a partir de los SVG finales, sin volver a dibujar la marca.
 
-El GIF tiene una paleta indexada: puede presentar pequeñas diferencias de color frente al SVG. El SVG sigue siendo la referencia de geometría y color. La vista real en GitHub permanece pendiente de comprobación; una animación correcta en el navegador local no demuestra por sí sola su comportamiento allí.
+El GIF tiene una paleta indexada: puede presentar pequeñas diferencias de color frente al SVG. El SVG sigue siendo la referencia de geometría y color. Esta versión se comprobó directamente en GitHub en doce combinaciones de tamaño, tema y preferencia de movimiento. El reporte conserva la evidencia y sus límites; esa prueba no cubre todos los dispositivos ni las opciones particulares de cada cuenta.
 
 ## Tipografía, contraste y uso
 

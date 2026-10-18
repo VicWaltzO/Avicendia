@@ -46,7 +46,7 @@ Los GIF se regeneran con `node scripts/render-readme-motion.cjs` desde el reposi
 
 Objetivos de peso: cada SVG por debajo de 350 KiB, el PNG por debajo de 700 KiB y cada GIF por debajo de 2 MiB. Después de regenerarlos, comprobar duración, reproducción única y que el movimiento quede limitado a la línea de datos.
 
-La estructura de `<picture>` se basa en la [documentación de GitHub](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/quickstart-for-writing-on-github#adding-an-image-to-suit-your-visitors). La comprobación pendiente del render real debe mantenerse explícita.
+La estructura de `<picture>` se basa en la [documentación de GitHub](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/quickstart-for-writing-on-github#adding-an-image-to-suit-your-visitors). En cada entrega, registrar qué se comprobó realmente allí y mantener explícita cualquier verificación pendiente.
 
 GitHub admite GIF y tiene [ajustes propios para el movimiento](https://docs.github.com/en/account-and-profile/how-tos/account-settings/managing-accessibility-settings). El README no puede leer esos ajustes: utiliza la preferencia que expone el navegador. Por eso hay que comprobar también el resultado en GitHub, sin asumir que una prueba local cubre todas sus opciones.
 

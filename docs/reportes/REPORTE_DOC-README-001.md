@@ -2,9 +2,11 @@
 
 18 de octubre de 2026 · Encargo transversal · Documentación y activos SVG/PNG · Riesgo R0.
 
-**Historial de versiones:** las secciones 1–7 conservan el alcance y la evidencia de la primera entrega estática. La sección 8 registra la revisión solicitada después: animación y redacción más natural. Sus nuevas pruebas corresponden a la versión 2; no sustituyen retroactivamente la evidencia de la versión 1. El generador de imágenes de la versión 2 se trata como herramienta de bajo impacto R1.
+**Estado actual: PUBLICADA, VALIDADA TÉCNICAMENTE EN EL ALCANCE DOCUMENTADO Y EN REVISIÓN DEL PROPIETARIO.** El PR está en borrador, sin fusionar; la sección 9 registra la publicación y la prueba real en GitHub. No se declara aceptación comercial de la marca.
 
-**Estado: PARCIAL — propuesta implementada localmente, pendiente de revisión del propietario y render real en GitHub.** No se declara aceptación comercial de la marca ni validación completa de P0. No se asigna un identificador CG ni se inicia otra tarea.
+**Historial de versiones:** las secciones 1–7 conservan el alcance y la evidencia de la primera entrega estática. La sección 8 registra la revisión solicitada después: animación y redacción más natural. La sección 9 añade la publicación autorizada y sus comprobaciones posteriores. Estas pruebas no sustituyen retroactivamente la evidencia de las versiones locales. El generador de imágenes de la versión 2 se trata como herramienta de bajo impacto R1.
+
+**Estado histórico de la versión 1: PARCIAL — propuesta implementada localmente, pendiente de revisión del propietario y render real en GitHub.** En esa etapa no se declaró aceptación comercial de la marca ni validación completa de P0. No se asigna un identificador CG ni se inicia otra tarea.
 
 ## 1. Objetivo y alcance autorizado
 
@@ -182,3 +184,34 @@ Antes de publicar se avanzó la rama local de branding por fast-forward hasta `7
 Se repitieron las comprobaciones de documentación y movimiento sobre esa base: PASS en cuatro documentos, seis SVG y los 192 fotogramas GIF, con los mismos límites de la versión 2. El conjunto publicable excluye el ZIP, el brief privado, las capturas locales, los auxiliares temporales y el paquete interno de ingeniería.
 
 **Estado al preparar el primer commit:** revisión de privacidad, clon limpio, publicación del commit, apertura del PR y comprobación del render remoto en curso. Los resultados posteriores se registrarán aquí sin atribuir a esta versión evidencia que todavía no existe. La aceptación del propietario sigue pendiente.
+
+### Resultados posteriores a la publicación
+
+El [commit 049d550](https://github.com/VicWaltzO/Avicendia/commit/049d55027dbe8def36935a6108b79bfb3e2812eb) se creó y publicó mediante Git normal, con autor y committer públicos noreply comprobados. Se revisaron las dieciséis rutas del incremento y los patrones de privacidad en los once archivos de texto/vector; no se añadieron archivos ajenos ni materiales internos. No se empleó force-push.
+
+Se creó el [PR #12](https://github.com/VicWaltzO/Avicendia/pull/12) hacia main, en borrador y sin fusión. GitHub confirmó una cabeza inicial 049d550, base 73f2518 y dieciséis archivos cambiados. La rama publicada es `codex/doc-readme-001-branding`.
+
+El clon de comprobación se creó con `git clone --no-local --single-branch`, desde la rama comprometida, y luego se contrastó mediante fetch con GitHub. HEAD y FETCH_HEAD coincidieron en `049d55027dbe8def36935a6108b79bfb3e2812eb`, con diff vacío y árbol de trabajo limpio. El clon no contiene el paquete interno de ingeniería, los auxiliares temporales ni el ZIP.
+
+Sobre ese clon pasaron los cuatro documentos, 57 enlaces/rutas locales, seis SVG, contraste y los 192 fotogramas de movimiento. Git normaliza los saltos CRLF de los dos SVG de identidad a LF: la comparación pública excluye exclusivamente esa diferencia de fin de línea; los trazados y los colores permanecen iguales. El conjunto público de once activos suma 481.117 bytes. Las comprobaciones de copia byte por byte de las secciones anteriores corresponden a la extracción local previa a esa normalización.
+
+### Render real en GitHub
+
+Se abrió el [README de la rama publicada](https://github.com/VicWaltzO/Avicendia/tree/codex/doc-readme-001-branding) en Edge 155.0.4283.62, mediante sesiones nuevas sin autenticar, sin sustituir el HTML ni los estilos de GitHub. Se comprobaron sus ocho fuentes picture, selección efectiva, imagen decodificada, encuadre y capturas reales. La primera lectura encontró un elemento reemplazado durante la carga dinámica; se esperó a que terminara esa carga y se repitió la matriz completa.
+
+| GitHub, claro y oscuro | 320 px de viewport | 768 px de viewport | 1280 px de viewport |
+|---|---|---|---|
+| Movimiento reducido | PASS: SVG compacto | PASS: SVG horizontal | PASS: SVG horizontal |
+| Movimiento normal | PASS: GIF compacto | PASS: GIF horizontal | PASS: GIF horizontal |
+| Imagen cargada y encuadrada | PASS | PASS | PASS |
+| Marca y eslogan visibles en la inspección | PASS | PASS | PASS |
+
+Pasaron las doce combinaciones. La imagen ocupó 254, 406 y 838 px, respectivamente, dentro del contenedor real de GitHub; el panel lateral explica la diferencia con los anchos de las pruebas locales. Se conservaron las proporciones y el alt. Las capturas temporizadas del GIF horizontal oscuro mostraron cambios durante el pulso y estabilidad después de cinco segundos. Se inspeccionaron las capturas de móvil, escritorio y fases del pulso.
+
+La evidencia directa queda en doce capturas de hero, ocho capturas de página, cuatro capturas temporizadas y `github-results.json`, conservadas localmente fuera del conjunto publicable. Esta prueba resuelve el render pendiente de las versiones anteriores para los escenarios observados; no cubre todos los dispositivos, lectores de pantalla o ajustes propios de cuentas autenticadas.
+
+### Estado de revisión y constancia
+
+La implementación y los checks técnicos de portada y animación tienen evidencia local, de clon limpio y de GitHub. La aceptación visual del maestro, del color y de la composición corresponde al propietario. El PR permanece en borrador, sin merge, release ni despliegue; main seguía en 73f2518 al comprobar las referencias después de subir la rama.
+
+Esta constancia posterior actualiza únicamente el reporte y el estado de verificación en las dos guías. Su commit se identifica en el [historial del PR](https://github.com/VicWaltzO/Avicendia/pull/12/commits) con el mensaje `docs(brand): registrar publicacion y render en GitHub (DOC-README-001)`. El README, los SVG, GIF, PNG y el generador permanecen en los mismos blobs que se probaron en el primer commit. No se inicia ninguna tarea posterior.
