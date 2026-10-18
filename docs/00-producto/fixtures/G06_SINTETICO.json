@@ -1,0 +1,404 @@
+{
+  "formato_documental": "1",
+  "sintetico": true,
+  "aviso": "Todas las identidades, cantidades, fechas y horas son inventadas. No reproduce cifras históricas ni es un esquema de la aplicación.",
+  "zona_horaria": "America/Lima",
+  "comprobacion_historica_exacta": "pendiente",
+  "organizacion": {
+    "empresa": {
+      "ref": "EMP-SIN",
+      "nombre": "Empresa Sintética"
+    },
+    "granja": {
+      "ref": "GR-SIN",
+      "nombre": "Granja Sintética",
+      "empresa_ref": "EMP-SIN"
+    },
+    "galpon": {
+      "ref": "GA-SIN",
+      "nombre": "Galpón Sintético",
+      "granja_ref": "GR-SIN"
+    },
+    "seccion_ref": null,
+    "motivo_seccion_ausente": "No se representa subdivisión ni se reparte población por sección.",
+    "tenant_ref": null,
+    "motivo_tenant_ausente": "Relación Tenant-Company fuera del alcance."
+  },
+  "campana": {
+    "ref": "CA-SIN",
+    "galpon_ref": "GA-SIN",
+    "fecha_inicio": "2034-07-10",
+    "fecha_cierre": null,
+    "motivo_cierre_ausente": "Campaña no finalizada en el escenario."
+  },
+  "partidas": [
+    {
+      "ref": "PA-SIN",
+      "campana_ref": "CA-SIN",
+      "origen": "Origen inventado A",
+      "fecha_nacimiento": "2034-07-09",
+      "recepcion_ref": "RX-A",
+      "machos_iniciales": 713,
+      "hembras_iniciales": 587
+    },
+    {
+      "ref": "PB-SIN",
+      "campana_ref": "CA-SIN",
+      "origen": "Origen inventado B",
+      "fecha_nacimiento": null,
+      "motivo_nacimiento_ausente": "Fecha no disponible en el escenario.",
+      "recepcion_ref": "RX-B",
+      "machos_iniciales": 463,
+      "hembras_iniciales": 397
+    }
+  ],
+  "recepciones": [
+    {
+      "ref": "RX-A",
+      "partida_ref": "PA-SIN",
+      "fecha_operativa": "2034-07-10",
+      "momento_evento": "2034-07-10T08:00:00-05:00",
+      "momento_registro": "2034-07-10T08:20:00-05:00"
+    },
+    {
+      "ref": "RX-B",
+      "partida_ref": "PB-SIN",
+      "fecha_operativa": "2034-07-11",
+      "momento_evento": null,
+      "motivo_hora_ausente": "Día de recepción conocido; hora exacta desconocida.",
+      "momento_registro": "2034-07-11T10:00:00-05:00"
+    }
+  ],
+  "supuestos_solo_del_fixture": {
+    "saldo_previo": {
+      "machos": 0,
+      "hembras": 0
+    },
+    "cobertura": "Del inicio del 2034-07-10 al fin del 2034-07-13; no hay otros ingresos.",
+    "otros_movimientos_aves": {
+      "descarte": 0,
+      "traslado_entrada": 0,
+      "traslado_salida": 0,
+      "venta": 0,
+      "ajuste": 0
+    },
+    "motivo_ceros": "Ausencia de esos movimientos establecida expresamente para el ejemplo, no inferida de registros faltantes.",
+    "jornada": "Día calendario local, desde 00:00 hasta 00:00 del siguiente día excluido; convención ficticia, no regla de la granja.",
+    "cantidades_ingreso": "Se suman únicamente desde partidas. Recepciones identifican eventos; resultados esperados no son nuevos ingresos.",
+    "atribucion_bajas": "Campaña y galpón; sin desglose por partida o sección.",
+    "cierre_diario": "Solo RD-A y RD-B se aceptan ficticiamente tras revisión; peso por saco y mediciones no realizadas quedan como pendientes expresamente aceptados. RD-C y RD-D no tienen cierre."
+  },
+  "registros_diarios": [
+    {
+      "ref": "RD-A",
+      "campana_ref": "CA-SIN",
+      "galpon_ref": "GA-SIN",
+      "partida_ref": null,
+      "seccion_ref": null,
+      "fecha_operativa": "2034-07-10",
+      "mortalidad": {
+        "machos": 7,
+        "hembras": 5,
+        "unidad": "ave",
+        "version": "MO-A"
+      },
+      "consumo_alimento": {
+        "cantidad": 2.75,
+        "unidad": "saco",
+        "peso_por_saco_kg": null,
+        "motivo_peso_ausente": "Peso por saco no documentado."
+      },
+      "tiempos": {
+        "T1": {
+          "desde": "2034-07-10T00:00:00-05:00",
+          "hasta_exclusivo": "2034-07-11T00:00:00-05:00"
+        },
+        "T2": "2034-07-11T00:10:00-05:00",
+        "T3": "2034-07-11T00:15:00-05:00",
+        "T4": "2034-07-11T00:25:00-05:00",
+        "T5": [
+          "2034-07-11T06:00:00-05:00"
+        ],
+        "T6": null,
+        "T7": "2034-07-11T08:00:00-05:00"
+      },
+      "correccion_ref": null,
+      "nota": "Sin corrección. Comunicación nocturna de la jornada anterior; cierre ficticio con pendientes aceptados."
+    },
+    {
+      "ref": "RD-B",
+      "campana_ref": "CA-SIN",
+      "galpon_ref": "GA-SIN",
+      "partida_ref": null,
+      "seccion_ref": null,
+      "fecha_operativa": "2034-07-11",
+      "mortalidad": {
+        "machos": 4,
+        "hembras": 3,
+        "unidad": "ave",
+        "version": "MO-B-v2"
+      },
+      "consumo_alimento": {
+        "cantidad": 3.25,
+        "unidad": "saco",
+        "peso_por_saco_kg": null,
+        "motivo_peso_ausente": "Peso por saco no documentado."
+      },
+      "tiempos": {
+        "T1": {
+          "desde": "2034-07-11T00:00:00-05:00",
+          "hasta_exclusivo": "2034-07-12T00:00:00-05:00"
+        },
+        "T2": "2034-07-12T00:10:00-05:00",
+        "T3": "2034-07-12T00:15:00-05:00",
+        "T4": "2034-07-12T00:25:00-05:00",
+        "T5": [
+          "2034-07-12T06:00:00-05:00",
+          "2034-07-12T07:30:00-05:00"
+        ],
+        "T6": "2034-07-12T07:00:00-05:00",
+        "T7": "2034-07-12T08:00:00-05:00"
+      },
+      "correccion_ref": "CO-SIN",
+      "nota": "T2, T3 y T4 corresponden a MO-B-v1 (hembras: 4); el valor vigente 3 corresponde a la corrección T6, no al aporte inicial. No sumar ambas versiones."
+    },
+    {
+      "ref": "RD-C",
+      "campana_ref": "CA-SIN",
+      "galpon_ref": "GA-SIN",
+      "partida_ref": null,
+      "seccion_ref": null,
+      "fecha_operativa": "2034-07-12",
+      "mortalidad": {
+        "machos": 6,
+        "hembras": null,
+        "motivo_hembras_ausente": "Recuento no disponible.",
+        "unidad": "ave",
+        "version": "MO-C"
+      },
+      "consumo_alimento": {
+        "cantidad": null,
+        "unidad": "saco",
+        "motivo_cantidad_ausente": "Consumo no informado.",
+        "peso_por_saco_kg": null,
+        "motivo_peso_ausente": "Peso por saco no documentado."
+      },
+      "tiempos": {
+        "T1": {
+          "desde": "2034-07-12T00:00:00-05:00",
+          "hasta_exclusivo": "2034-07-13T00:00:00-05:00"
+        },
+        "T2": "2034-07-13T00:10:00-05:00",
+        "T3": "2034-07-13T00:15:00-05:00",
+        "T4": "2034-07-13T00:25:00-05:00",
+        "T5": [
+          "2034-07-13T06:00:00-05:00"
+        ],
+        "T6": null,
+        "T7": null
+      },
+      "correccion_ref": null,
+      "nota": "T2 refiere solo a los aportes conocidos. No hubo corrección; cierre pendiente por faltantes."
+    },
+    {
+      "ref": "RD-D",
+      "campana_ref": "CA-SIN",
+      "galpon_ref": "GA-SIN",
+      "partida_ref": null,
+      "seccion_ref": null,
+      "fecha_operativa": "2034-07-13",
+      "mortalidad": {
+        "machos": 0,
+        "hembras": 2,
+        "unidad": "ave",
+        "version": "MO-D",
+        "nota_machos": "Cero efectivamente declarado dentro del ejemplo ficticio."
+      },
+      "consumo_alimento": {
+        "cantidad": 121.5,
+        "unidad": "kg",
+        "peso_por_saco_kg": null,
+        "motivo_peso_ausente": "No aplica al registro comunicado directamente en kg."
+      },
+      "tiempos": {
+        "T1": {
+          "desde": "2034-07-13T00:00:00-05:00",
+          "hasta_exclusivo": "2034-07-14T00:00:00-05:00"
+        },
+        "T2": "2034-07-14T00:10:00-05:00",
+        "T3": "2034-07-14T00:15:00-05:00",
+        "T4": "2034-07-14T00:25:00-05:00",
+        "T5": [
+          "2034-07-14T06:00:00-05:00"
+        ],
+        "T6": null,
+        "T7": null
+      },
+      "correccion_ref": null,
+      "nota": "Sin corrección ni cierre; el faltante anterior de hembras sigue pendiente."
+    }
+  ],
+  "correcciones": [
+    {
+      "ref": "CO-SIN",
+      "registro_ref": "RD-B",
+      "campo": "mortalidad.hembras",
+      "version_anterior": "MO-B-v1",
+      "valor_anterior": 4,
+      "version_vigente": "MO-B-v2",
+      "valor_vigente": 3,
+      "motivo": "Rectificación ficticia del recuento.",
+      "funcion_autorizada_ficticia": "Revisor del escenario",
+      "registrada_en": "2034-07-12T07:00:00-05:00",
+      "comunicada_en": "2034-07-12T07:10:00-05:00",
+      "revisada_en": "2034-07-12T07:30:00-05:00"
+    }
+  ],
+  "despacho_separado_del_consumo": {
+    "ref": "DS-SIN",
+    "fecha_operativa": "2034-07-10",
+    "cantidad": 5,
+    "unidad": "saco",
+    "naturaleza": "despacho de alimento",
+    "nota": "No se suma al consumo informado ni prueba consumo."
+  },
+  "mediciones": [
+    {
+      "ref": "ME-PH",
+      "tipo": "ph_agua",
+      "fecha_operativa": "2034-07-10",
+      "partida_ref": null,
+      "valor": 6.74,
+      "unidad": "adimensional",
+      "momento_evento": "2034-07-10T11:00:00-05:00",
+      "momento_registro": "2034-07-10T11:20:00-05:00",
+      "contexto": "Lectura ficticia en punto de agua del galpón; método no validado."
+    },
+    {
+      "ref": "ME-TA",
+      "tipo": "temperatura_ambiental",
+      "fecha_operativa": "2034-07-10",
+      "partida_ref": null,
+      "valor": 30.6,
+      "unidad": "°C",
+      "momento_evento": "2034-07-10T11:00:00-05:00",
+      "momento_registro": "2034-07-10T11:20:00-05:00",
+      "contexto": "Un punto y momento ficticios; no caracteriza toda la jornada."
+    },
+    {
+      "ref": "ME-TC",
+      "tipo": "temperatura_cloacal",
+      "fecha_operativa": "2034-07-10",
+      "partida_ref": "PA-SIN",
+      "valor": null,
+      "unidad": "°C",
+      "momento_evento": null,
+      "momento_registro": "2034-07-10T11:20:00-05:00",
+      "motivo_ausencia": "Medición no realizada; no se infiere de la temperatura ambiental."
+    },
+    {
+      "ref": "ME-BU",
+      "tipo": "llenado_buche",
+      "fecha_operativa": "2034-07-10",
+      "partida_ref": "PA-SIN",
+      "momento_evento": "2034-07-10T11:00:00-05:00",
+      "momento_registro": "2034-07-10T11:20:00-05:00",
+      "universo_aves": 16,
+      "categorias": [
+        {
+          "categoria": "lleno",
+          "aves": 9
+        },
+        {
+          "categoria": "parcial",
+          "aves": 4
+        },
+        {
+          "categoria": "vacio",
+          "aves": 2
+        },
+        {
+          "categoria": "no_evaluable",
+          "aves": 1
+        }
+      ],
+      "contexto": "Cada ave de la muestra aparece una sola vez; categorías ficticias mutuamente excluyentes, sin protocolo sanitario validado."
+    }
+  ],
+  "resultados_esperados_no_son_ingresos": {
+    "poblacion_inicial_tras_ambas_recepciones": {
+      "machos": 1176,
+      "hembras": 984,
+      "total": 2160
+    },
+    "totales_por_partida": {
+      "PA-SIN": 1300,
+      "PB-SIN": 860
+    },
+    "saldos_por_jornada": [
+      {
+        "registro_ref": "RD-A",
+        "ingresos_acumulados_machos": 713,
+        "ingresos_acumulados_hembras": 587,
+        "mortalidad_diaria_total": 12,
+        "mortalidad_acumulada_machos": 7,
+        "mortalidad_acumulada_hembras": 5,
+        "mortalidad_acumulada_total": 12,
+        "saldo_machos": 706,
+        "saldo_hembras": 582,
+        "saldo_total": 1288
+      },
+      {
+        "registro_ref": "RD-B",
+        "ingresos_acumulados_machos": 1176,
+        "ingresos_acumulados_hembras": 984,
+        "mortalidad_diaria_total": 7,
+        "mortalidad_acumulada_machos": 11,
+        "mortalidad_acumulada_hembras": 8,
+        "mortalidad_acumulada_total": 19,
+        "saldo_machos": 1165,
+        "saldo_hembras": 976,
+        "saldo_total": 2141
+      },
+      {
+        "registro_ref": "RD-C",
+        "ingresos_acumulados_machos": 1176,
+        "ingresos_acumulados_hembras": 984,
+        "mortalidad_diaria_total": null,
+        "mortalidad_acumulada_machos": 17,
+        "mortalidad_acumulada_hembras": null,
+        "mortalidad_acumulada_total": null,
+        "saldo_machos": 1159,
+        "saldo_hembras": null,
+        "saldo_total": null
+      },
+      {
+        "registro_ref": "RD-D",
+        "ingresos_acumulados_machos": 1176,
+        "ingresos_acumulados_hembras": 984,
+        "mortalidad_diaria_total": 2,
+        "mortalidad_acumulada_machos": 17,
+        "mortalidad_acumulada_hembras": null,
+        "mortalidad_acumulada_total": null,
+        "saldo_machos": 1159,
+        "saldo_hembras": null,
+        "saldo_total": null
+      }
+    ],
+    "saldo_final_por_partida": null,
+    "motivo_saldo_partida_ausente": "Sin atribución de mortalidad por partida, especialmente desde la segunda recepción.",
+    "consumos_conocidos_separados": {
+      "sacos": 6.0,
+      "kg": 121.5,
+      "cobertura_completa": false,
+      "total_convertido_kg": null
+    },
+    "porcentajes_muestra_buche": {
+      "lleno": 56.25,
+      "parcial": 25.0,
+      "vacio": 12.5,
+      "no_evaluable": 6.25,
+      "total": 100.0
+    }
+  }
+}
