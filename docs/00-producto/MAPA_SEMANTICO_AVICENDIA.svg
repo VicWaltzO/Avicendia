@@ -1,0 +1,138 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1130" viewBox="0 0 1600 1130" role="img" aria-labelledby="titulo descripcion">
+<title id="titulo">Avicendia — mapa semántico del proyecto</title><desc id="descripcion">Plataforma prevista de gestión y trazabilidad avícola. Ocho módulos distinguen conceptos documentados, capacidades planificadas y propuestas experimentales. No hay capacidades ejecutables verificadas. Las flechas representan relaciones conceptuales. Revisión humana autorizada antes de confirmar datos. Piloto todavía no ejecutado.</desc>
+<defs><marker id="punta" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8" fill="#1A1A1A"/></marker></defs>
+<g font-family="Arial, Helvetica, sans-serif"><rect width="1600" height="1130" fill="#FFFFFF"/>
+<text x="40" y="38" font-size="17" font-weight="700" fill="#1A1A1A" text-anchor="start">CG-011  /  MAPA SEMÁNTICO</text>
+<text x="1560" y="38" font-size="17" font-weight="400" fill="#1A1A1A" text-anchor="end">19 OCT 2026 · DOCUMENTACIÓN DE PRODUCTO</text>
+<g id="nucleo-avicendia">
+<rect x="360" y="62" width="880" height="118" rx="12" fill="#1A1A1A" stroke="#1A1A1A" stroke-width="2"/>
+<text x="800" y="112" font-size="40" font-weight="700" fill="#FFFFFF" text-anchor="middle">AVICENDIA</text>
+<text x="800" y="151" font-size="24" font-weight="400" fill="#FFFFFF" text-anchor="middle">Plataforma de gestión y trazabilidad avícola.</text>
+</g>
+<text x="800" y="211" font-size="22" font-weight="400" fill="#1A1A1A" text-anchor="middle">Hipótesis: registros dispersos · consolidación manual · consulta histórica difícil</text>
+<g id="modulo-captura" aria-label="Captura de información">
+<rect x="40" y="245" width="350" height="260" rx="12" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="2"/>
+<text x="62" y="285" font-size="26" font-weight="700" fill="#1A1A1A" text-anchor="start">Captura de información</text>
+<text x="62" y="325" font-size="18" font-weight="700" fill="#1A1A1A" text-anchor="start">D</text>
+<text x="92" y="325" font-size="19" font-weight="400" fill="#1A1A1A" text-anchor="start">Cartillas · fotos · mensajes</text>
+<text x="62" y="356" font-size="18" font-weight="700" fill="#1A1A1A" text-anchor="start">D</text>
+<text x="92" y="356" font-size="19" font-weight="400" fill="#1A1A1A" text-anchor="start">Video · audio · documentos</text>
+<text x="62" y="387" font-size="18" font-weight="700" fill="#1A1A1A" text-anchor="start">P</text>
+<text x="92" y="387" font-size="19" font-weight="400" fill="#1A1A1A" text-anchor="start">Registro manual en Avicendia</text>
+<text x="62" y="418" font-size="18" font-weight="700" fill="#1A1A1A" text-anchor="start">P</text>
+<text x="92" y="418" font-size="19" font-weight="400" fill="#1A1A1A" text-anchor="start">Ingreso digital de evidencias</text>
+<text x="62" y="483" font-size="16" font-weight="400" fill="#1A1A1A" text-anchor="start">Soportes descritos; captura no disponible</text>
+</g>
+<g id="modulo-produccion" aria-label="Producción">
+<rect x="430" y="245" width="350" height="260" rx="12" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="2"/>
+<text x="452" y="285" font-size="26" font-weight="700" fill="#1A1A1A" text-anchor="start">Producción</text>
+<text x="452" y="325" font-size="18" font-weight="700" fill="#1A1A1A" text-anchor="start">D</text>
+<text x="482" y="325" font-size="19" font-weight="400" fill="#1A1A1A" text-anchor="start">Campañas · partidas</text>
+<text x="452" y="356" font-size="18" font-weight="700" fill="#1A1A1A" text-anchor="start">D</text>
+<text x="482" y="356" font-size="19" font-weight="400" fill="#1A1A1A" text-anchor="start">Mortalidad · consumo</text>
+<text x="452" y="387" font-size="18" font-weight="700" fill="#1A1A1A" text-anchor="start">D</text>
+<text x="482" y="387" font-size="19" font-weight="400" fill="#1A1A1A" text-anchor="start">Mediciones · reporte diario</text>
+<text x="452" y="418" font-size="18" font-weight="700" fill="#1A1A1A" text-anchor="start">P</text>
+<text x="482" y="418" font-size="19" font-weight="400" fill="#1A1A1A" text-anchor="start">Registro y consolidación</text>
+<text x="452" y="483" font-size="16" font-weight="400" fill="#1A1A1A" text-anchor="start">Diccionario definido; software pendiente</text>
+</g>
+<g id="modulo-trazabilidad" aria-label="Trazabilidad">
+<rect x="820" y="245" width="350" height="260" rx="12" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="2"/>
+<text x="842" y="285" font-size="26" font-weight="700" fill="#1A1A1A" text-anchor="start">Trazabilidad</text>
+<text x="842" y="325" font-size="18" font-weight="700" fill="#1A1A1A" text-anchor="start">D</text>
+<text x="872" y="325" font-size="19" font-weight="400" fill="#1A1A1A" text-anchor="start">Empresas · granjas</text>
+<text x="842" y="356" font-size="18" font-weight="700" fill="#1A1A1A" text-anchor="start">D</text>
+<text x="872" y="356" font-size="19" font-weight="400" fill="#1A1A1A" text-anchor="start">Galpones · secciones</text>
+<text x="842" y="387" font-size="18" font-weight="700" fill="#1A1A1A" text-anchor="start">D</text>
+<text x="872" y="387" font-size="19" font-weight="400" fill="#1A1A1A" text-anchor="start">Fuente · historial · correcciones</text>
+<text x="842" y="418" font-size="18" font-weight="700" fill="#1A1A1A" text-anchor="start">P</text>
+<text x="872" y="418" font-size="19" font-weight="400" fill="#1A1A1A" text-anchor="start">Consulta y control de acceso</text>
+<text x="842" y="483" font-size="16" font-weight="400" fill="#1A1A1A" text-anchor="start">Organización y empresa son distintas</text>
+</g>
+<g id="modulo-analitica" aria-label="Analítica">
+<rect x="1210" y="245" width="350" height="260" rx="12" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="2"/>
+<text x="1232" y="285" font-size="26" font-weight="700" fill="#1A1A1A" text-anchor="start">Analítica</text>
+<text x="1232" y="325" font-size="18" font-weight="700" fill="#1A1A1A" text-anchor="start">D</text>
+<text x="1262" y="325" font-size="19" font-weight="400" fill="#1A1A1A" text-anchor="start">Método e indicadores del piloto</text>
+<text x="1232" y="356" font-size="18" font-weight="700" fill="#1A1A1A" text-anchor="start">P</text>
+<text x="1262" y="356" font-size="19" font-weight="400" fill="#1A1A1A" text-anchor="start">Reportes · evaluación</text>
+<text x="1232" y="387" font-size="18" font-weight="700" fill="#1A1A1A" text-anchor="start">P</text>
+<text x="1262" y="387" font-size="19" font-weight="400" fill="#1A1A1A" text-anchor="start">Comparación histórica</text>
+<text x="1232" y="418" font-size="18" font-weight="700" fill="#1A1A1A" text-anchor="start">E</text>
+<text x="1262" y="418" font-size="19" font-weight="400" fill="#1A1A1A" text-anchor="start">Proyecciones predictivas</text>
+<text x="1232" y="483" font-size="16" font-weight="400" fill="#1A1A1A" text-anchor="start">Piloto no ejecutado; líneas por medir</text>
+</g>
+<g id="relaciones-principales" fill="none" stroke="#1A1A1A" stroke-width="2">
+<path d="M390 370 H425" marker-end="url(#punta)"/>
+<path d="M780 370 H815" marker-end="url(#punta)"/>
+<path d="M1170 370 H1205" marker-end="url(#punta)"/>
+</g>
+<text x="800" y="546" font-size="22" font-weight="700" fill="#1A1A1A" text-anchor="middle">Captura → información operativa → trazabilidad → reportes → analítica → decisiones</text>
+<text x="800" y="579" font-size="20" font-weight="400" fill="#1A1A1A" text-anchor="middle">Revisión humana autorizada antes de confirmar · ausente ≠ cero · fuente y correcciones conservadas</text>
+<text x="40" y="625" font-size="17" font-weight="700" fill="#1A1A1A" text-anchor="start">CAPACIDADES DE APOYO  /  SUJETAS A VALIDACIÓN</text>
+<g id="modulo-iot" aria-label="Infraestructura rural / IoT">
+<rect x="40" y="655" width="350" height="260" rx="12" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="2"/>
+<text x="62" y="695" font-size="22" font-weight="700" fill="#1A1A1A" text-anchor="start">Infraestructura rural / IoT</text>
+<text x="62" y="735" font-size="18" font-weight="700" fill="#1A1A1A" text-anchor="start">E</text>
+<text x="92" y="735" font-size="19" font-weight="400" fill="#1A1A1A" text-anchor="start">Sensores · ESP32 · LoRa</text>
+<text x="62" y="766" font-size="18" font-weight="700" fill="#1A1A1A" text-anchor="start">E</text>
+<text x="92" y="766" font-size="19" font-weight="400" fill="#1A1A1A" text-anchor="start">Red local · centro de granja</text>
+<text x="62" y="797" font-size="18" font-weight="700" fill="#1A1A1A" text-anchor="start">E</text>
+<text x="92" y="797" font-size="19" font-weight="400" fill="#1A1A1A" text-anchor="start">Sincronización con conexión</text>
+<text x="62" y="828" font-size="18" font-weight="700" fill="#1A1A1A" text-anchor="start">E</text>
+<text x="92" y="828" font-size="19" font-weight="400" fill="#1A1A1A" text-anchor="start">Viabilidad y equipos por probar</text>
+<text x="62" y="893" font-size="16" font-weight="400" fill="#1A1A1A" text-anchor="start">Propuestas; sin dispositivos verificados</text>
+</g>
+<g id="modulo-inteligencia" aria-label="Procesamiento inteligente">
+<rect x="430" y="655" width="350" height="260" rx="12" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="2"/>
+<text x="452" y="695" font-size="22" font-weight="700" fill="#1A1A1A" text-anchor="start">Procesamiento inteligente</text>
+<text x="452" y="735" font-size="18" font-weight="700" fill="#1A1A1A" text-anchor="start">P</text>
+<text x="482" y="735" font-size="19" font-weight="400" fill="#1A1A1A" text-anchor="start">OCR · lectura multimodal</text>
+<text x="452" y="766" font-size="18" font-weight="700" fill="#1A1A1A" text-anchor="start">P</text>
+<text x="482" y="766" font-size="19" font-weight="400" fill="#1A1A1A" text-anchor="start">Clasificación · inconsistencias</text>
+<text x="452" y="797" font-size="18" font-weight="700" fill="#1A1A1A" text-anchor="start">P</text>
+<text x="482" y="797" font-size="19" font-weight="400" fill="#1A1A1A" text-anchor="start">Asistencia mediante IA</text>
+<text x="452" y="828" font-size="18" font-weight="700" fill="#1A1A1A" text-anchor="start">D</text>
+<text x="482" y="828" font-size="19" font-weight="400" fill="#1A1A1A" text-anchor="start">Candidato → revisión → registro</text>
+<text x="452" y="893" font-size="16" font-weight="400" fill="#1A1A1A" text-anchor="start">Extracción ≠ hecho confirmado</text>
+</g>
+<g id="modulo-comunicacion" aria-label="Comunicación">
+<rect x="820" y="655" width="350" height="260" rx="12" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="2"/>
+<text x="842" y="695" font-size="26" font-weight="700" fill="#1A1A1A" text-anchor="start">Comunicación</text>
+<text x="842" y="735" font-size="18" font-weight="700" fill="#1A1A1A" text-anchor="start">D</text>
+<text x="872" y="735" font-size="19" font-weight="400" fill="#1A1A1A" text-anchor="start">Comunicar · aclarar · corregir</text>
+<text x="842" y="766" font-size="18" font-weight="700" fill="#1A1A1A" text-anchor="start">P</text>
+<text x="872" y="766" font-size="19" font-weight="400" fill="#1A1A1A" text-anchor="start">Notificaciones · consultas</text>
+<text x="842" y="797" font-size="18" font-weight="700" fill="#1A1A1A" text-anchor="start">P</text>
+<text x="872" y="797" font-size="19" font-weight="400" fill="#1A1A1A" text-anchor="start">Alertas · mensajería</text>
+<text x="842" y="828" font-size="18" font-weight="700" fill="#1A1A1A" text-anchor="start">P</text>
+<text x="872" y="828" font-size="19" font-weight="400" fill="#1A1A1A" text-anchor="start">WhatsApp sujeto a viabilidad</text>
+<text x="842" y="893" font-size="16" font-weight="400" fill="#1A1A1A" text-anchor="start">Sin integración funcional verificada</text>
+</g>
+<g id="modulo-administracion" aria-label="Administración y comercio">
+<rect x="1210" y="655" width="350" height="260" rx="12" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="2"/>
+<text x="1232" y="695" font-size="22" font-weight="700" fill="#1A1A1A" text-anchor="start">Administración y comercio</text>
+<text x="1232" y="735" font-size="18" font-weight="700" fill="#1A1A1A" text-anchor="start">D</text>
+<text x="1262" y="735" font-size="19" font-weight="400" fill="#1A1A1A" text-anchor="start">Empresas · roles · recursos</text>
+<text x="1232" y="766" font-size="18" font-weight="700" fill="#1A1A1A" text-anchor="start">D</text>
+<text x="1262" y="766" font-size="19" font-weight="400" fill="#1A1A1A" text-anchor="start">Conceptos comerciales</text>
+<text x="1232" y="797" font-size="18" font-weight="700" fill="#1A1A1A" text-anchor="start">P</text>
+<text x="1262" y="797" font-size="19" font-weight="400" fill="#1A1A1A" text-anchor="start">Usuarios · accesos · gestión</text>
+<text x="1232" y="828" font-size="18" font-weight="700" fill="#1A1A1A" text-anchor="start">E</text>
+<text x="1262" y="828" font-size="19" font-weight="400" fill="#1A1A1A" text-anchor="start">Seguimiento e integraciones</text>
+<text x="1232" y="893" font-size="16" font-weight="400" fill="#1A1A1A" text-anchor="start">Sin módulo comercial ejecutable</text>
+</g>
+<g id="relacion-sensores-captura" fill="none" stroke="#1A1A1A" stroke-width="2" stroke-dasharray="5 6"><path d="M58 655 H20 V475 H35" marker-end="url(#punta)"/></g>
+<text x="800" y="952" font-size="20" font-weight="400" fill="#1A1A1A" text-anchor="middle">IoT aportaría a captura · IA asistiría la revisión · comunicación serviría alertas y consultas</text>
+<g id="leyenda">
+<rect x="40" y="980" width="350" height="54" rx="8" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="2"/>
+<text x="56" y="1014" font-size="19" font-weight="700" fill="#1A1A1A" text-anchor="start">I  IMPLEMENTADO</text>
+<rect x="430" y="980" width="350" height="54" rx="8" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="2"/>
+<text x="446" y="1014" font-size="19" font-weight="700" fill="#1A1A1A" text-anchor="start">D  DOCUMENTADO</text>
+<rect x="820" y="980" width="350" height="54" rx="8" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="2" stroke-dasharray="9 5"/>
+<text x="836" y="1014" font-size="19" font-weight="700" fill="#1A1A1A" text-anchor="start">P  PLANIFICADO</text>
+<rect x="1210" y="980" width="350" height="54" rx="8" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="2" stroke-dasharray="2 5"/>
+<text x="1226" y="1014" font-size="19" font-weight="700" fill="#1A1A1A" text-anchor="start">E  EXPERIMENTAL</text>
+<text x="40" y="1063" font-size="20" font-weight="400" fill="#1A1A1A" text-anchor="start">I: ejecutable verificado (ninguno) · D: definido en documentos · P: previsto · E: requiere investigación o pruebas</text>
+<text x="40" y="1100" font-size="19" font-weight="400" fill="#1A1A1A" text-anchor="start">Flecha continua: relación conceptual documentada · discontinua: propuesta hipotética · no son integraciones ni arquitectura</text>
+</g></g></svg>
