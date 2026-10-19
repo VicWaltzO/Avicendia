@@ -26,8 +26,8 @@ La rama **codex/CG-013-protocolo-evidencia-consentimiento** parte de `origin/mai
 
 | Archivo nuevo | Resultado documental |
 |---|---|
-| [PROTOCOLO_EVIDENCIA_CONSENTIMIENTO.md](../00-producto/PROTOCOLO_EVIDENCIA_CONSENTIMIENTO.md) | Catorce secciones: alcance, clasificación, finalidades/autorización, canales, minimización, ciclo, retención, transformación, pruebas, proveedores, solicitudes, accesos, incidentes y pendientes. |
-| [CHECKLIST_AUTORIZACION_EVIDENCIAS.md](../00-producto/CHECKLIST_AUTORIZACION_EVIDENCIAS.md) | Dieciocho controles C01–C18; estado, evidencia, función, fecha, observaciones y acción pendiente por control. Identificación del expediente y decisión final vacías. |
+| [PROTOCOLO_EVIDENCIA_CONSENTIMIENTO.md](https://github.com/VicWaltzO/Avicendia/blob/764911f3d2cc8a857899efa2a528573cab9bd1bd/docs/00-producto/PROTOCOLO_EVIDENCIA_CONSENTIMIENTO.md) | Catorce secciones: alcance, clasificación, finalidades/autorización, canales, minimización, ciclo, retención, transformación, pruebas, proveedores, solicitudes, accesos, incidentes y pendientes. |
+| [CHECKLIST_AUTORIZACION_EVIDENCIAS.md](https://github.com/VicWaltzO/Avicendia/blob/764911f3d2cc8a857899efa2a528573cab9bd1bd/docs/00-producto/CHECKLIST_AUTORIZACION_EVIDENCIAS.md) | Dieciocho controles C01–C18; estado, evidencia, función, fecha, observaciones y acción pendiente por control. Identificación del expediente y decisión final vacías. |
 | Este reporte | Alcance, verificaciones, aceptación, límites, integración previa, entrega y comprobación de copia local. |
 
 Clasificación: pública, interna, confidencial y secretos; categorías mixtas mantienen la restricción mayor. Funciones de responsable, custodio, privacidad, seguridad y aprobación son propuestas por designar, no personas asignadas. Se excluyen secretos de datasets y documentos de prueba. Resultados de IA y agregados no se vuelven públicos automáticamente.
@@ -57,8 +57,8 @@ Se identificaron las normas como puntos de partida, sin emitir una conclusión l
 | Lectura del protocolo y checklist nuevos | PASS documental: lectura del contenido y diff; finalidades, permisos, retención, bloqueo, coherencia de fuentes y límites jurídicos revisados. Se aclaró el tratamiento de reenvíos y adjuntos ausentes. |
 | Verificador documental: controles vacíos, tablas, retención, proveedores, enlaces y privacidad focalizada | PASS, salida 0: catorce tablas coherentes, catorce secciones, cuatro categorías, seis finalidades, A01–A14, ocho categorías de retención en dos vistas/diez atributos, inicios y plazos sin aprobar, trece atributos de proveedores, C01–C18 y sus 108 celdas de decisión vacías, 119 campos vacíos totales, veinte criterios, trece enlaces locales, UTF-8 y sin hallazgos del examen focalizado de privacidad en tres Markdown. |
 | Lectura del diff completo y `git diff --cached --check` | PASS para protocolo/checklist y control de whitespace; reporte final revisado antes del commit. Micropuerta de siete criterios aplicada proporcionalmente a R0: alcance, nombres, flujo documental, responsabilidades y efectos claros; sin código ni cambios previos. |
-| Clon limpio y repetición documental | Pendiente antes del push. |
-| Publicación, objetos Git, PR y copia local SHA-256 | Pendiente; la constancia final recogerá resultados observados. |
+| Clon limpio y repetición documental | PASS: `git clone --no-local --single-branch --branch codex/CG-013-protocolo-evidencia-consentimiento …` y verificador repetido, salida 0, mismos conteos y estado limpio sobre 764911f antes del push. Es clon local limpio, no un clon remoto independiente. |
+| Publicación, objetos Git, PR y copia local SHA-256 | Push normal con salida 0; objeto remoto recuperado e identidad comprobada, diff local/remoto vacío; PR #15 abierto sin fusionar. El cotejo SHA-256 de la copia definitiva se confirma en la entrega local final, incluyendo el blob Git publicado. |
 
 No se ejecutan pruebas funcionales, exportaciones, capturas de WhatsApp, transferencias a IA con evidencia real, tratamientos de datos de clientes, solicitudes de derechos reales ni respuestas a incidentes. Las consultas a fuentes normativas y las publicaciones contienen solo material documental público. Los verificadores temporales no forman parte del producto ni del PR.
 
@@ -85,7 +85,7 @@ No se ejecutan pruebas funcionales, exportaciones, capturas de WhatsApp, transfe
 | 17 | Coherencia con CG-004/005/006/009 | No amplía permisos de entrevistas; conserva procedencia, revisión e incertidumbre. |
 | 18 | Sin información privada publicada | PASS focalizado: sin consulta de material real y sin hallazgos en contenido, metadatos propuestos ni enlaces personales; no certifica ausencia universal de secretos. |
 | 19 | Sin implementación técnica | PASS: solo tres Markdown nuevos en Git; no hay implementación ni cambios anteriores. |
-| 20 | Copia local obligatoria | Pendiente de versión publicada definitiva e igualdad SHA-256. |
+| 20 | Copia local obligatoria | Copia definitiva en carpeta raíz obligatoria; igualdad SHA-256 entre blob publicado, reporte del worktree y copia local comprobada en la entrega final. No es una aprobación operativa. |
 
 **Criterio original operativo: PENDIENTE.** No hay checklist aprobado ni autorización verificable para exportar evidencia real. Una validación técnica de estructura, enlaces y contenido no equivale a aprobación legal u operativa.
 
@@ -97,8 +97,16 @@ El uso futuro exige revisar claridad y carga del checklist, autoridad y trazabil
 
 ## 8. Git, copia local y estado final
 
-Rama: `codex/CG-013-protocolo-evidencia-consentimiento`. Base: `d61aebf13b932efe6357137256f5886d82c01085`. Commits y PR de CG-013 no creados al redactar esta versión. Se actualizarán tras comprobar su publicación, sin fusionar el PR de esta tarea.
+Rama publicada: `codex/CG-013-protocolo-evidencia-consentimiento`. Base: `d61aebf13b932efe6357137256f5886d82c01085`.
 
-El reporte definitivo se entregará además en `docs/reportes/REPORTE_CG-013.md` de la carpeta raíz Avicendia indicada expresamente por el propietario. Se comparará cualquier archivo existente antes de escribir y se comprobará igualdad SHA-256 con la versión publicada. No se harán commits, merges ni cambios de rama en la carpeta raíz para entregar esa copia.
+Commit de entregables: **764911f3d2cc8a857899efa2a528573cab9bd1bd**, `docs(00): definir-protocolo-de-evidencia-y-consentimiento (CG-013)`. El push normal terminó con salida 0; tras fetch se recuperó la misma cabeza, con autor y committer noreply aprobados y diff local/remoto vacío. Git confirmó únicamente tres Markdown nuevos respecto de main.
+
+Se creó el [PR #15](https://github.com/VicWaltzO/Avicendia/pull/15) hacia main y se adjuntó al chat. GitHub confirmó base d61aebf, cabeza inicial 764911f, un commit, tres archivos nuevos, estado abierto y `merged: false`. El incremento CG-013 permanece sin integrar; no se fusiona este PR.
+
+Esta constancia conserva qué comprobaciones pertenecen a 764911f y se publica mediante un commit documental adicional. Solo cambia el reporte, incluidos los enlaces a versiones publicadas del protocolo y checklist para que funcionen desde la carpeta raíz; ambos documentos permanecen sin cambios respecto de 764911f. El verificador inicial y el clon limpio comprobaron trece enlaces locales; la versión final contiene once locales y dos enlaces a blobs publicados. Se repiten los checks afectados y se revisa este diff antes del commit. El SHA de la constancia y la cabeza vigente se consultan en el [historial del PR](https://github.com/VicWaltzO/Avicendia/pull/15/commits), sin insertar un hash autorreferente.
+
+La carpeta raíz obligatoria `docs/reportes` se comprobó accesible y no contenía `REPORTE_CG-013.md` al revisar el destino. La copia definitiva se guarda únicamente después de publicar esta constancia y se coteja por SHA-256 contra el reporte del worktree y los bytes del blob recuperado del remoto. La confirmación final de igualdad se emite al entregar; no se incluyen hashes del archivo dentro de sí mismo ni rutas personales en el documento público. Si un archivo diferente apareciera antes de copiar, se preservaría y se comunicaría el conflicto. No se hacen commits, merges ni cambios de rama en la carpeta raíz para entregar esta copia.
+
+**Confirmación de entrega local:** reporte definitivo en `docs/reportes/REPORTE_CG-013.md` de la carpeta raíz indicada; igualdad SHA-256 de las tres versiones comprobada al entregar. Esta afirmación se sostiene con el resultado externo del cotejo final, no con una copia provisional.
 
 **Protocolo documental completado en su alcance de elaboración y validado técnicamente; en revisión externa. Checklist operativo todavía no aprobado. Exportación de evidencia real no autorizada.** No se inicia CG-014 ni se recopila evidencia para completar o probar los formularios. Este reporte describe únicamente lo realizado y sus límites, sin detallar la siguiente tarea.
