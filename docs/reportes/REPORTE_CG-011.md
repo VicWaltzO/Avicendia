@@ -85,4 +85,14 @@ No hay datos, migraciones, actuadores o producción afectados. La reversión con
 
 ## Constancia Git final
 
-Rama solicitada: `codex/CG-011-mapa-semantico-proyecto`. Base pública: `6b484af`. Commit, publicación y PR se consignan después de verificarlos, sin atribuirse acciones todavía no ejecutadas.
+Rama publicada: `codex/CG-011-mapa-semantico-proyecto`. Base de creación: `6b484af`. Commit de entregables: **973e55fac1b3f8fc70d17a18d4c954ab63d1de49**, `feat(00): dibujar-mapa-semantico-del-proyecto (CG-011)`.
+
+`git clone --no-local --single-branch --branch codex/CG-011-mapa-semantico-proyecto …` creó una copia limpia local. El verificador documental volvió a pasar: ocho módulos, 95 textos, 15 ID, estados 13 D / 13 P / 6 E y 34 enlaces locales; estado Git limpio. Esa comprobación corresponde al commit 973e55f y precede a esta constancia.
+
+El push normal de la rama terminó con salida 0. Un fetch posterior recuperó 973e55f desde origin; autor y committer corresponden a la identidad noreply aprobada en ambos campos, y el diff entre cabeza local y remota estaba vacío. El [PR #13](https://github.com/VicWaltzO/Avicendia/pull/13) se creó hacia `main`: GitHub confirmó un commit, tres archivos nuevos, estado abierto y `merged: false`. Se adjuntó a este chat.
+
+Durante el trabajo, main avanzó por una tarea concurrente de presentación a `618bc68651279466569264b27b0f372a579bbfb0`. Se inspeccionaron sus rutas: GIF, mantenimiento de portada, convenciones de marca, generador y reporte de esa otra tarea; no modifica los tres entregables CG-011 ni introduce software del SaaS. No se integró ni reescribió trabajo concurrente. La base original de CG-011 permanece declarada.
+
+La revisión automática rechazó un comando inicial de commit por incluir una opción que deshabilitaría hooks. Ese comando no se ejecutó; se retiró la opción y el commit normal pasó manteniendo los hooks configurados. También rechazó inicialmente crear el PR por considerar ausente la autorización: se comprobó la instrucción expresa de la sección 15 del encargo y el reintento autorizado creó el PR. No quedó una aprobación bloqueada ni se usaron vías alternativas para omitir controles.
+
+Esta constancia se publica mediante un commit documental adicional con identidad noreply, sin cambiar el SVG ni la guía. Su SHA y la cabeza vigente se consultan en el [historial del PR](https://github.com/VicWaltzO/Avicendia/pull/13/commits); no se inserta un hash autorreferente. Se revisa su diff, se repite el verificador documental y el control de whitespace antes del commit. El cierre permanece **en revisión externa, sin aceptación final**. No se fusiona ni se inicia CG-012.
