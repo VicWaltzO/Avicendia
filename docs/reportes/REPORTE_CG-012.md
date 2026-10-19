@@ -24,8 +24,8 @@ La rama **codex/CG-012-inventario-fisico-minimo** parte de `origin/main` actuali
 
 | Archivo nuevo | Contenido |
 |---|---|
-| [INVENTARIO_FISICO_MINIMO.md](../00-producto/INVENTARIO_FISICO_MINIMO.md) | Propósito, convenciones, dos vistas de doce galpones, seis zonas, ficha condicional de sección, seis categorías de servicios y ficha de servicio, dimensiones, cinco ejemplos y diez pendientes. |
-| [PLANTILLA_FICHA_INFRAESTRUCTURA.md](../00-producto/PLANTILLA_FICHA_INFRAESTRUCTURA.md) | Ficha vacía con identificación común y bloques condicionales de galpón, zona, sección, dimensión y servicio; sin datos reales ni opciones seleccionadas. |
+| [INVENTARIO_FISICO_MINIMO.md](https://github.com/VicWaltzO/Avicendia/blob/6b84c9956cec7e04d3001da73a12aa22170d3768/docs/00-producto/INVENTARIO_FISICO_MINIMO.md) | Propósito, convenciones, dos vistas de doce galpones, seis zonas, ficha condicional de sección, seis categorías de servicios y ficha de servicio, dimensiones, cinco ejemplos y diez pendientes. |
+| [PLANTILLA_FICHA_INFRAESTRUCTURA.md](https://github.com/VicWaltzO/Avicendia/blob/6b84c9956cec7e04d3001da73a12aa22170d3768/docs/00-producto/PLANTILLA_FICHA_INFRAESTRUCTURA.md) | Ficha vacía con identificación común y bloques condicionales de galpón, zona, sección, dimensión y servicio; sin datos reales ni opciones seleccionadas. |
 | Este reporte | Alcance, integración previa, aceptación, verificación real, límites, riesgos y entrega Git. |
 
 El reporte también se entrega en la carpeta raíz `docs/reportes` indicada por el propietario; se comprueba igualdad con la versión final de la rama antes de entregar. Las copias reales de campo quedarían fuera del repositorio y sus carpetas de trabajo.
@@ -60,7 +60,7 @@ La matriz de pendientes cubre existencia, organización de zonas, secciones, dim
 | Lectura completa de ambos documentos nuevos | Realizada: comprobadas definiciones, relaciones pendientes, unidades, campos, ejemplos y límites públicos. |
 | Verificación documental de matrices, estados, tablas, ejemplos, enlaces y privacidad focalizada | PASS mediante verificador temporal: 18 tablas con columnas coherentes; G01–G12 en dos vistas; Z01–Z06; relaciones y dimensiones desconocidas; ocho campos de sección, seis categorías y nueve campos de servicio; seis categorías de dimensión; diez pendientes; 39 campos de plantilla vacíos; cinco ejemplos; 30 × 8 = 240; quince criterios; trece enlaces locales; UTF-8 y revisión focalizada de privacidad sin hallazgos en los tres Markdown. |
 | Lectura del diff completo y `git diff --cached --check` | PASS: documentos del inventario y plantilla leídos en el diff staged; whitespace con salida 0. Revisión del reporte final antes del commit; alcance de tres Markdown nuevos, sin documentos anteriores ni código. |
-| Comprobación desde clon limpio | Pendiente antes del push de CG-012. |
+| Comprobación desde clon limpio | PASS: clon local con `git clone --no-local --single-branch --branch codex/CG-012-inventario-fisico-minimo …`; verificador repetido con salida 0 y mismos conteos, sobre 6b84c99, antes de publicarlo. Estado limpio. No es un clon remoto independiente. |
 
 No se ejecutan pruebas funcionales, builds, visitas, observaciones de campo, mediciones, evaluaciones de aforo o mantenimiento. Los checks documentales no demuestran existencia de infraestructura ni utilidad de campo. No se afirma ausencia universal de secretos por una revisión focalizada.
 
@@ -96,6 +96,14 @@ No hay datos, migraciones, equipos o producción afectados por CG-012. Retirar s
 
 ## 8. Git, revisión y detención
 
-Rama: `codex/CG-012-inventario-fisico-minimo`. Base: `440a52289a055fa9d7c1865aeba225df4abdb161`. Commit y PR de CG-012 todavía no creados al redactar esta versión; se actualizarán después de comprobarlos.
+Rama publicada: `codex/CG-012-inventario-fisico-minimo`. Base: `440a52289a055fa9d7c1865aeba225df4abdb161`.
+
+Commit de entregables: **6b84c9956cec7e04d3001da73a12aa22170d3768**, `docs(00): levantar-inventario-fisico-minimo (CG-012)`. El push normal terminó con salida 0. Un fetch posterior recuperó la misma cabeza desde origin; el diff local/remoto resultó vacío. Autor y committer del objeto publicado: VicWaltzO y `336614700+VicWaltzO@users.noreply.github.com`, identidad aprobada en ambos campos. No hubo force push ni omisión de hooks.
+
+Se creó el [PR #14](https://github.com/VicWaltzO/Avicendia/pull/14) hacia main y se adjuntó al chat. GitHub confirmó base 440a522, cabeza inicial 6b84c99, un commit y tres archivos nuevos; estado abierto y `merged: false`. No se fusiona el PR de CG-012 como parte de esta entrega.
+
+Esta constancia conserva la evidencia de la versión 6b84c99 y se publica en un commit documental adicional. La única modificación posterior es este reporte: resultados del clon, entrega y enlaces de los dos documentos a sus versiones publicadas para que funcionen también desde la copia raíz. La verificación inicial tenía trece enlaces locales; la versión final conserva once locales y dos referencias a blobs publicados. Se repiten los checks afectados antes del commit. Su SHA y la cabeza vigente se pueden consultar en el [historial del PR](https://github.com/VicWaltzO/Avicendia/pull/14/commits), sin inventar un hash autorreferente.
+
+Se entrega una copia idéntica de este reporte en la carpeta raíz `docs/reportes` indicada por el propietario. La igualdad se verifica mediante SHA-256 tras la publicación final. Los documentos del inventario y la ficha permanecen sin cambios respecto de 6b84c99.
 
 La entrega está validada técnicamente en alcance documental y en revisión externa, sin aceptación final. No se fusionará el PR de CG-012, no se implementará software ni se iniciará CG-013. Este reporte comunica únicamente lo realizado, sin especificar la siguiente tarea.
