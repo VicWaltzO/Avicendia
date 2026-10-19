@@ -5,13 +5,15 @@ const path = require('node:path');
 const sharp = require('sharp');
 
 const artwork = path.resolve(__dirname, '../assets/branding/readme');
-const frameCount = 48;
 const frameDelayMs = 100;
+const pulseDurationMs = 2000;
+const breathingDurationMs = 4000;
+const frameCount = breathingDurationMs / frameDelayMs;
 const dataLine = 'M584 439 H730 C792 439 798 417 854 417 S928 439 996 439 H1468';
 
 function pulseOverlay(compact, dark, frame) {
-  const progress = frame / (frameCount - 1);
-  // Entra y sale sin salto: el primer y el último fotograma quedan en reposo.
+  const progress = ((frame * frameDelayMs) % pulseDurationMs) / pulseDurationMs;
+  // El pulso se desvanece al salir de la línea antes de iniciar otro recorrido.
   const envelope = Math.sin(Math.PI * progress) ** 2;
   const color = dark ? '#FFE082' : '#B23A1A';
   const line = compact ? 'M280 570 H440' : dataLine;
@@ -27,6 +29,17 @@ function pulseOverlay(compact, dark, frame) {
   return `<g id="pulso-de-datos" aria-hidden="true"><path d="${line}" fill="none" stroke="${color}" stroke-width="${compact ? 4 : 3}" stroke-linecap="round" stroke-dasharray="${trail} 2000" stroke-dashoffset="${(trail - progress * (lineLength + 2 * trail)).toFixed(2)}" opacity="${(envelope * .55).toFixed(4)}"/>${markers}</g>`;
 }
 
+function breatheImagotype(source, compact, frame) {
+  const phase = frame * frameDelayMs / breathingDurationMs;
+  const scale = 1 + .008 * Math.sin(Math.PI * phase) ** 2;
+  const [centerX, centerY] = compact ? [360, 207] : [788, 258];
+  const transform = `translate(${centerX} ${centerY}) scale(${scale.toFixed(6)}) translate(${-centerX} ${-centerY})`;
+  // Un solo grupo mantiene las proporciones entre el símbolo y el nombre.
+  return source
+    .replace(/<g\b(?=[^>]*\bid="isotipo")/, `<g id="respiracion-imagotipo" transform="${transform}"><g`)
+    .replace(/<g\b(?=[^>]*\bid="eslogan")/, '</g><g');
+}
+
 async function renderVariant(compact, dark) {
   const variant = `${compact ? 'compact-' : ''}${dark ? 'dark' : 'light'}`;
   const width = compact ? 720 : 1600;
@@ -34,17 +47,18 @@ async function renderVariant(compact, dark) {
   const source = await fs.readFile(path.join(artwork, `hero-${variant}.svg`), 'utf8');
   const frames = [];
   for (let frame = 0; frame < frameCount; frame += 1) {
-    const svg = source.replace('</svg>', `${pulseOverlay(compact, dark, frame)}</svg>`);
+    const svg = breatheImagotype(source, compact, frame)
+      .replace('</svg>', `${pulseOverlay(compact, dark, frame)}</svg>`);
     frames.push(await sharp(Buffer.from(svg)).ensureAlpha().raw().toBuffer());
   }
   const output = path.join(artwork, `hero-motion-${variant}.gif`);
   await sharp(Buffer.concat(frames), {
     raw: { width, height: height * frameCount, channels: 4, pageHeight: height },
-  }).gif({ colours: 256, dither: 0, effort: 7, loop: 1,
+  }).gif({ colours: 256, dither: 0, effort: 7, loop: 0,
     delay: Array(frameCount).fill(frameDelayMs), keepDuplicateFrames: true }).toFile(output);
   const metadata = await sharp(output, { animated: true }).metadata();
   const durationMs = metadata.delay.reduce((total, delay) => total + delay, 0);
-  if (metadata.loop !== 1 || metadata.pages !== frameCount || durationMs !== frameCount * frameDelayMs) {
+  if (metadata.loop !== 0 || metadata.pages !== frameCount || durationMs !== breathingDurationMs) {
     throw new Error(`Duración o repetición inesperada en ${path.basename(output)}`);
   }
   return { file: path.basename(output), width, height, frames: metadata.pages,

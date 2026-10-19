@@ -46,7 +46,7 @@ Los cuatro banners SVG son editables por grupos: fondo, detalle de datos, isotip
 
 ## Movimiento
 
-Un pulso cálido recorre la línea de datos y destaca tres puntos de forma suave. Dura 4,8 segundos, se reproduce una vez y vuelve al reposo. El nombre, el eslogan y el símbolo permanecen inmóviles.
+Un pulso cálido recorre la línea de datos y destaca tres puntos de forma suave cada 2 segundos, en bucle continuo. El imagotipo (símbolo y nombre juntos) respira con una ampliación uniforme máxima del 0,8 % y vuelve a su tamaño original cada 4 segundos. El eslogan permanece inmóvil. Ambos ciclos enlazan suavemente, sin parpadeos.
 
 Los GIF se muestran solo cuando el navegador no solicita reducir el movimiento. En los demás casos se usa la composición estática. La [guía de mantenimiento](../README_MAINTENIMIENTO.md) explica cómo comprobar esta selección y regenerar las cuatro variantes con el [generador editable](../../scripts/render-readme-motion.cjs). El generador trabaja a partir de los SVG finales, sin volver a dibujar la marca.
 

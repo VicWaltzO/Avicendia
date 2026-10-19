@@ -32,7 +32,7 @@ La geometría de la marca se mantiene en [los SVG editables de portada](../asset
 
 El elemento `<picture>` elige la versión clara u oscura y una composición compacta hasta 600 px de viewport. Si el navegador indica `prefers-reduced-motion: no-preference`, carga el GIF correspondiente. Con movimiento reducido, o sin soporte para esa preferencia, conserva el SVG estático. El PNG sigue siendo el respaldo final. Esta selección depende del viewport del navegador, no del ancho aislado de una columna.
 
-La animación mueve solo el detalle de datos, durante 4,8 segundos y una única vez. El símbolo y las letras se mantienen quietos; al terminar, el banner vuelve al reposo. Evitar bucles infinitos, parpadeos y movimientos del texto.
+La animación repite el recorrido del pulso cada 2 segundos. El imagotipo (símbolo y nombre como una unidad) respira cada 4 segundos con una ampliación uniforme máxima del 0,8 %. El eslogan permanece quieto. El GIF completo dura 4 segundos y se repite continuamente; evitar parpadeos y saltos entre ciclos. La preferencia de movimiento reducido conserva la portada estática.
 
 Tras una modificación visual:
 
@@ -40,11 +40,11 @@ Tras una modificación visual:
 2. Comprobar las cuatro variantes SVG estáticas y el respaldo: sin scripts, fuentes incrustadas, recursos externos ni metadatos personales.
 3. Inspeccionar 320, 768 y 1280 px en claro y oscuro: imágenes cargadas, símbolo reconocible, nombre y eslogan legibles, sin recortes ni distorsión. Revisar también una columna estrecha en escritorio si cambia el diseño.
 4. Comprobar el README en GitHub cuando el cambio esté autorizado y publicado. Una captura local no acredita compatibilidad de GitHub. Registrar `PARTIAL` si falta esta prueba.
-5. Probar cada tema y tamaño con movimiento normal y reducido. Con movimiento normal, observar el pulso y comprobar que se detiene. Con movimiento reducido, verificar que se selecciona un SVG. Mantener alt descriptivo y el propósito/estado del producto como texto Markdown. El texto normal debe alcanzar contraste de al menos 4,5:1.
+5. Probar cada tema y tamaño con movimiento normal y reducido. Con movimiento normal, observar dos recorridos del pulso por cada respiración del imagotipo y comprobar la continuidad del bucle. Con movimiento reducido, verificar que se selecciona un SVG. Mantener alt descriptivo y el propósito/estado del producto como texto Markdown. El texto normal debe alcanzar contraste de al menos 4,5:1.
 
 Los GIF se regeneran con `node scripts/render-readme-motion.cjs` desde el repositorio. El [generador](../scripts/render-readme-motion.cjs) usa Node y `sharp >= 0.34.3`, disponibles en el entorno de herramientas; no son dependencias de la aplicación. Si ese entorno no tiene sharp, hay que prepararlo aparte antes de ejecutar el comando. El script solo escribe los cuatro GIF dentro de `assets/branding/readme/`.
 
-Objetivos de peso: cada SVG por debajo de 350 KiB, el PNG por debajo de 700 KiB y cada GIF por debajo de 2 MiB. Después de regenerarlos, comprobar duración, reproducción única y que el movimiento quede limitado a la línea de datos.
+Objetivos de peso: cada SVG por debajo de 350 KiB, el PNG por debajo de 700 KiB y cada GIF por debajo de 2 MiB. Después de regenerarlos, comprobar duración, repetición continua, pulso cada 2 segundos y respiración del imagotipo sin desplazar el eslogan.
 
 La estructura de `<picture>` se basa en la [documentación de GitHub](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/quickstart-for-writing-on-github#adding-an-image-to-suit-your-visitors). En cada entrega, registrar qué se comprobó realmente allí y mantener explícita cualquier verificación pendiente.
 
